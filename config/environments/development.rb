@@ -16,14 +16,14 @@ Rails.application.configure do
 
   # Enable server timing
   config.server_timing = true
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  config.navigational_formats = []
+  # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  # config.navigational_formats = []
+
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join("tmp/caching-dev.txt").exist?
-    config.action_controller.perform_caching = true
-    config.action_controller.enable_fragment_cache_logging = true
-
+    # config.action_controller.perform_caching = true
+    # config.action_controller.enable_fragment_cache_logging = true
     config.cache_store = :memory_store
     config.public_file_server.headers = {
       "Cache-Control" => "public, max-age=#{2.days.to_i}"
@@ -61,7 +61,7 @@ Rails.application.configure do
   config.active_job.verbose_enqueue_logs = true
 
   # Suppress logger output for asset requests.
-  config.assets.quiet = true
+  # config.assets.quiet = true
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
@@ -73,5 +73,9 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   # Raise error when a before_action's only/except options reference missing actions
+  # config.action_controller.raise_on_missing_callback_actions = true
+  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.action_controller.raise_on_missing_callback_actions = true
+  config.action_mailer.default_url_options = { host: 'localhost', port: 4000 }
+  config.navigational_formats = []
 end
