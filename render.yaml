@@ -1,5 +1,5 @@
 databases:
-  - name:
+  - name: entrust-database
     databaseName: entrust_backend_development
     user: entrust_backend
     plan: free
