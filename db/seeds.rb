@@ -22,12 +22,12 @@ programs = Program.create([
     ]}])
 
 
-# teams = Team.create([
-#     {fullname: "", title: "Executive Director", image: ('https://res.cloudinary.com/dqvb49fnb/image/upload/v1723668679/executive-director_wdb6qt.jpg')},
-#     {fullname: "", title: "Associate Director", image: ('https://res.cloudinary.com/dqvb49fnb/image/upload/v1723668158/baraka_oqgrth.jpg')},
-#     {fullname: "", title: "Ass.Financial Administrator", image: ('https://res.cloudinary.com/dqvb49fnb/image/upload/v1723668158/entrust_financial_administartor_w0pr4l.jpg')},
-#     {fullname: "", title: "Administrator", image: ('https://res.cloudinary.com/dqvb49fnb/image/upload/v1723668158/entrust_administrator_r3dxck.jpg')},
-#     {fullname: "", title: "Enrollment Cordinator", image: ('https://res.cloudinary.com/dqvb49fnb/image/upload/v1723668158/enroll_cordinator_iednhm.jpg')},
-#     {fullname: "", title: "Media Cordinator", image: ('https://res.cloudinary.com/dqvb49fnb/image/upload/v1723668158/media_rikxjb.jpg')},
-#     {fullname: "", title: "Events Director", image: ('https://res.cloudinary.com/dqvb49fnb/image/upload/v1723668158/entrust_events_director_whp6oh.jpg')},
-# ])
+teams = Team.create([
+    {fullname: "", title: "Executive Director", image: ('https://res.cloudinary.com/dqvb49fnb/image/upload/v1723668679/executive-director_wdb6qt.jpg')},
+    {fullname: "", title: "Associate Director", image: ('https://res.cloudinary.com/dqvb49fnb/image/upload/v1723668158/baraka_oqgrth.jpg')},
+    {fullname: "", title: "Ass.Financial Administrator", image: ('https://res.cloudinary.com/dqvb49fnb/image/upload/v1723668158/entrust_financial_administartor_w0pr4l.jpg')},
+    {fullname: "", title: "Administrator", image: ('https://res.cloudinary.com/dqvb49fnb/image/upload/v1723668158/entrust_administrator_r3dxck.jpg')},
+    {fullname: "", title: "Enrollment Cordinator", image: ('https://res.cloudinary.com/dqvb49fnb/image/upload/v1723668158/enroll_cordinator_iednhm.jpg')},
+    {fullname: "", title: "Media Cordinator", image: ('https://res.cloudinary.com/dqvb49fnb/image/upload/v1723668158/media_rikxjb.jpg')},
+    {fullname: "", title: "Events Director", image: ('https://res.cloudinary.com/dqvb49fnb/image/upload/v1723668158/entrust_events_director_whp6oh.jpg')},
+])
