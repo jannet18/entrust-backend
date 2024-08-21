@@ -79,6 +79,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL']%>
   database: entrust_backend_production
   username: entrust_backend
   password: <%= ENV["ENTRUST_BACKEND_DATABASE_PASSWORD"] %>
