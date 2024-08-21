@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     # protect_from_forgery with: :null_session
-    skip_before_action :verify_authenticity_token
+    # skip_before_action :verify_authenticity_token
     before_action :log_request
     rescue_from JWT::ExpiredSignature, with: :render_unauthorized
     rescue_from JWT::VerificationError, with: :render_unauthorized
