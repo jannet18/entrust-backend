@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   # get "up" => "rails/health#show", as: :rails_health_check
   
   root 'render#index'
+  get "/nickelfox"
   # Defines the root path route ("/")
 
   resources :volunteers, only: [:create]
