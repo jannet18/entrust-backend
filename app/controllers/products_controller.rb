@@ -16,20 +16,17 @@ class ProductsController < ApplicationController
 
         if uploaded_image.present?
             result = Cloudinary::Uploader.upload(uploaded_image.path)
-
             @product = Listing.new(product_params.merge(image_url: result['secure_url']))
 
-                if @product.save
-                    render json: {status: "Product created successfully", product: @product}, status: :created
-                else
-                    render json: {errors: @product.errors.full_messages}, status: :uprocessable_entity
-                end
+            if @product.save
+                render json: {status: "Product created successfully", product: @product}, status: :created
             else
-                render json: {errors: ["Image not provided"]}, status: :uprocessable_entity
+                render json: {errors: @product.errors.full_messages}, status: :uprocessable_entity
             end
+        else
+            render json: {errors: ["Image not provided"]}, status: :uprocessable_entity
         end
     end
-
 
     def updated
         product = Listing.find(params[:id])
