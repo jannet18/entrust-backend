@@ -1,7 +1,9 @@
 class ListingsController < ApplicationController
     def index
-        listing = Listing.all
-        render json: listing
+        listing = Listing.includes(products: :variants).all
+        render json: listing.as_json(include: {
+            products: {include: :variants}
+        })
     end
 
     def show
