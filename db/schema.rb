@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_21_211925) do
+ActiveRecord::Schema[7.1].define(version: 2024_09_05_184629) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,11 +23,17 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_21_211925) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "listings", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.string "description"
+    t.text "description"
     t.decimal "price"
-    t.string "image_url"
+    t.integer "listing_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -82,10 +88,23 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_21_211925) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "jti", null: false
+    t.string "jti"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["jti"], name: "index_users_on_jti", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "variants", force: :cascade do |t|
+    t.bigint "product_id", null: false
+    t.string "image_url"
+    t.string "color"
+    t.string "size"
+    t.string "weight"
+    t.integer "quantity"
+    t.decimal "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_variants_on_product_id"
   end
 
   create_table "volunteers", force: :cascade do |t|
@@ -100,4 +119,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_21_211925) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "variants", "products"
 end
