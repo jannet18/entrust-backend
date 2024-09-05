@@ -34,52 +34,52 @@
 
 
 
-# tshirt_listing = Listing.create(name: "T-shirts")
+tshirt_listing = Listing.create(name: "T-shirts")
 
-# product = tshirt_listing.products.create(
-#     name: "Basic T-shirt", 
-#     description: 'A basic cotton t-shirt made from a crisp, medium-weight 100% cotton and designed for a tailored, yet comfortable fit. The classic neck rib includes a touch of lycra to retain its shape over time. Branded with the entrust initiative logo on the front.',
-#     price: 850
-# )
+product = tshirt_listing.products.create(
+    name: "Basic T-shirt", 
+    description: 'A basic cotton t-shirt made from a crisp, medium-weight 100% cotton and designed for a tailored, yet comfortable fit. The classic neck rib includes a touch of lycra to retain its shape over time. Branded with the entrust initiative logo on the front.',
+    price: 850
+)
 
-# product.variants.create([
-#     {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_white_t_o4fgaz.jpg", color: "White", size: "S", quantity: "20", weight: "", price: 850},
-#     {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379945/entrust_blue_t_qtybna.jpg", color: "Blue", size: "S", quantity: "20", weight: "", price: 850},
-#     {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379945/entrust_red_t_j0iypz.jpg", color: "Red", size: "S", quantity: "20", weight: "", price: 850},
-#     {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379943/entrust_mustard_t_cw1xor.jpg", color: "Mustard Yellow", size: "S", quantity: "20", weight: "", price: 850},
-#     {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379940/enrtust_gray_t_emxhph.jpg", color: "Gray", size: "S", quantity: "20", weight: "", price: 850},
-#     {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379946/enrust_jungle_t_gjirez.jpg", color: "Jungle Green", size: "S", quantity: "20", weight: "", price: 850}
+product.variants.create([
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_white_t_o4fgaz.jpg", color: "White", size: "S", quantity: "20", weight: "", price: 850},
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379945/entrust_blue_t_qtybna.jpg", color: "Blue", size: "S", quantity: "20", weight: "", price: 850},
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379945/entrust_red_t_j0iypz.jpg", color: "Red", size: "S", quantity: "20", weight: "", price: 850},
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379943/entrust_mustard_t_cw1xor.jpg", color: "Mustard Yellow", size: "S", quantity: "20", weight: "", price: 850},
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379940/enrtust_gray_t_emxhph.jpg", color: "Gray", size: "S", quantity: "20", weight: "", price: 850},
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379946/enrust_jungle_t_gjirez.jpg", color: "Jungle Green", size: "S", quantity: "20", weight: "", price: 850}
 
-# ])
+])
 
-# hoodies_listing = Listing.create(name: "Hoodies")
+hoodies_listing = Listing.create(name: "Hoodies")
 
-# product = hoodies_listing.products.create(
-#     name: "Classic Hoodie", 
-#     description: 'A classic cotton Hoodie made from a crisp, medium-weight 100% cotton and designed for a tailored, yet comfortable fit. The classic neck rib includes a touch of lycra to retain its shape over time. Branded with the entrust initiative logo on the front.',
-#     price: 2500
-# )
+product = hoodies_listing.products.create(
+    name: "Classic Hoodie", 
+    description: 'A classic cotton Hoodie made from a crisp, medium-weight 100% cotton and designed for a tailored, yet comfortable fit. The classic neck rib includes a touch of lycra to retain its shape over time. Branded with the entrust initiative logo on the front.',
+    price: 2500
+)
 
-# product.variants.create([
-#     {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_mustard_hoodie_jrnioq.jpg", color: "Yellow", size: "XL", quantity: "20", weight: "", price: 2500},
-#     {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379941/entrust_black_hoodie_f6pp7i.jpg", color: "Black", size: "M", quantity: "20", weight: "", price: 2500},
-#     {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_mustard_hoodie_jrnioq.jpg", color: "Yellow", size: "S", quantity: "20", weight: "", price: 2500},
-#     {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379941/entrust_black_hoodie_f6pp7i.jpg", color: "Black", size: "L", quantity: "20", weight: "", price: 2500},
-
-
-# ])
-
-# mugs_listing = Listing.create(name: "Mugs")
-
-# product = mugs_listing.products.create(
-#     name: "Beautiful Mugs", 
-#     description: 'A beautiful Mug branded with the entrust initiative logo',
-#     price: 350
-# )
-
-# product.variants.create([
-#     {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379943/enrtust_mug_uvchrm.jpg", color: "Gray", size: "Normal", quantity: "20", weight: "", price: 350},
+product.variants.create([
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_mustard_hoodie_jrnioq.jpg", color: "Yellow", size: "XL", quantity: "20", weight: "", price: 2500},
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379941/entrust_black_hoodie_f6pp7i.jpg", color: "Black", size: "M", quantity: "20", weight: "", price: 2500},
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_mustard_hoodie_jrnioq.jpg", color: "Yellow", size: "S", quantity: "20", weight: "", price: 2500},
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379941/entrust_black_hoodie_f6pp7i.jpg", color: "Black", size: "L", quantity: "20", weight: "", price: 2500},
 
 
+])
 
-# ])
+mugs_listing = Listing.create(name: "Mugs")
+
+product = mugs_listing.products.create(
+    name: "Beautiful Mugs", 
+    description: 'A beautiful Mug branded with the entrust initiative logo',
+    price: 350
+)
+
+product.variants.create([
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379943/enrtust_mug_uvchrm.jpg", color: "Gray", size: "Normal", quantity: "20", weight: "", price: 350},
+
+
+
+])
