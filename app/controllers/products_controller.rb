@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
     before_action :set_category
+
     def index
         product = Listing.all
         render json: product
@@ -18,20 +19,22 @@ class ProductsController < ApplicationController
 
             @product = Listing.new(product_params.merge(image_url: result['secure_url']))
 
-            if @product.save
-                render json: {status: "Product created successfully", product: @product}, status: :created
+                if @product.save
+                    render json: {status: "Product created successfully", product: @product}, status: :created
+                else
+                    render json: {errors: @product.errors.full_messages}, status: :uprocessable_entity
+                end
             else
-                render json: {errors: @product.errors.full_messages}, status: :uprocessable_entity
+                render json: {errors: ["Image not provided"]}, status: :uprocessable_entity
             end
-        else
-            render json: {errors: ["Image not provided"]}, status: :uprocessable_entity
         end
     end
+
 
     def updated
         product = Listing.find(params[:id])
         product.update(product_params)
-        render json: {product, message: "Product has been updated successfully."}
+        render json: {product: product, message: "Product has been updated successfully."}
     end
 
     def destroy
@@ -39,7 +42,10 @@ class ProductsController < ApplicationController
         product.destroy
         render json: {message: "Product deleted."}
     end
+
+
     private
+
     def set_category
         listing = Listing.find(params[:listing_id])
     end
