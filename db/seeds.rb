@@ -43,12 +43,12 @@ product = tshirt_listing.products.create(
 )
 
 product.variants.create([
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_white_t_o4fgaz.jpg", color: "White", size: "S", quantity: "20", weight: "", price: 850},
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379945/entrust_blue_t_qtybna.jpg", color: "Blue", size: "S", quantity: "20", weight: "", price: 850},
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379945/entrust_red_t_j0iypz.jpg", color: "Red", size: "S", quantity: "20", weight: "", price: 850},
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379943/entrust_mustard_t_cw1xor.jpg", color: "Mustard Yellow", size: "S", quantity: "20", weight: "", price: 850},
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379940/enrtust_gray_t_emxhph.jpg", color: "Gray", size: "S", quantity: "20", weight: "", price: 850},
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379946/enrust_jungle_t_gjirez.jpg", color: "Jungle Green", size: "S", quantity: "20", weight: "", price: 850}
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_white_t_o4fgaz.jpg", color: "#FFFFFF", size: "S", quantity: "20", weight: "", price: 850},
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379945/entrust_blue_t_qtybna.jpg", color: "#4793AF", size: "S", quantity: "20", weight: "", price: 850},
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379945/entrust_red_t_j0iypz.jpg", color: "#E72929", size: "S", quantity: "20", weight: "", price: 850},
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379943/entrust_mustard_t_cw1xor.jpg", color: "#FABC3F", size: "S", quantity: "20", weight: "", price: 850},
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379940/enrtust_gray_t_emxhph.jpg", color: "#31363F", size: "S", quantity: "20", weight: "", price: 850},
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379946/enrust_jungle_t_gjirez.jpg", color: "#A28B55", size: "S", quantity: "20", weight: "", price: 850}
 
 ])
 
@@ -61,10 +61,10 @@ product = hoodies_listing.products.create(
 )
 
 product.variants.create([
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_mustard_hoodie_jrnioq.jpg", color: "Yellow", size: "XL", quantity: "20", weight: "", price: 2500},
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379941/entrust_black_hoodie_f6pp7i.jpg", color: "Black", size: "M", quantity: "20", weight: "", price: 2500},
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_mustard_hoodie_jrnioq.jpg", color: "Yellow", size: "S", quantity: "20", weight: "", price: 2500},
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379941/entrust_black_hoodie_f6pp7i.jpg", color: "Black", size: "L", quantity: "20", weight: "", price: 2500},
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_mustard_hoodie_jrnioq.jpg", color: "#FFB200", size: "XL", quantity: "20", weight: "", price: 2500},
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379941/entrust_black_hoodie_f6pp7i.jpg", color: "#151515", size: "M", quantity: "20", weight: "", price: 2500},
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_mustard_hoodie_jrnioq.jpg", color: "#FFB200", size: "S", quantity: "20", weight: "", price: 2500},
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379941/entrust_black_hoodie_f6pp7i.jpg", color: "#151515", size: "L", quantity: "20", weight: "", price: 2500},
 
 
 ])
@@ -78,7 +78,7 @@ product = mugs_listing.products.create(
 )
 
 product.variants.create([
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379943/enrtust_mug_uvchrm.jpg", color: "Gray", size: "Normal", quantity: "20", weight: "", price: 350},
+    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379943/enrtust_mug_uvchrm.jpg", color: "#151515", size: "Normal", quantity: "20", weight: "", price: 350},
 
 
 
