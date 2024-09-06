@@ -31,61 +31,57 @@
 #     {fullname: "", title: "Media Cordinator", image: ('https://res.cloudinary.com/dqvb49fnb/image/upload/v1723668158/media_rikxjb.jpg')},
 #     {fullname: "", title: "Events Director", image: ('https://res.cloudinary.com/dqvb49fnb/image/upload/v1723668158/entrust_events_director_whp6oh.jpg')},
 # ])
+if Rails.env.development? || Rails.env.staging?
 
+    product = Product.destroy_all
 
+    tshirt_listing = Listing.find_or_create_by(name: "T-shirts")
 
-tshirt_listing = Listing.find_or_create_by(name: "T-shirts")
+    product = tshirt_listing.products.find_or_create_by(
+        name: "Basic T-shirt", 
+        description: 'A basic cotton t-shirt made from a crisp, medium-weight 100% cotton and designed for a tailored, yet comfortable fit. The classic neck rib includes a touch of lycra to retain its shape over time. Branded with the entrust initiative logo on the front.',
+        price: 850
+    )
 
-unless Product.exists?
-product = tshirt_listing.products.find_or_create_by(
-    name: "Basic T-shirt", 
-    description: 'A basic cotton t-shirt made from a crisp, medium-weight 100% cotton and designed for a tailored, yet comfortable fit. The classic neck rib includes a touch of lycra to retain its shape over time. Branded with the entrust initiative logo on the front.',
-    price: 850
-)
+    [
+        {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_white_t_o4fgaz.jpg", color: "#FFFFFF", size: "S", quantity: "20", weight: "", price: 850},
+        {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379945/entrust_blue_t_qtybna.jpg", color: "#4793AF", size: "S", quantity: "20", weight: "", price: 850},
+        {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379945/entrust_red_t_j0iypz.jpg", color: "#E72929", size: "S", quantity: "20", weight: "", price: 850},
+        {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379943/entrust_mustard_t_cw1xor.jpg", color: "#FABC3F", size: "S", quantity: "20", weight: "", price: 850},
+        {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379940/enrtust_gray_t_emxhph.jpg", color: "#31363F", size: "S", quantity: "20", weight: "", price: 850},
+        {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379946/enrust_jungle_t_gjirez.jpg", color: "#A28B55", size: "S", quantity: "20", weight: "", price: 850},
+    ].each do |variant_attrs|
+        product.variants.find_or_create_by(variant_attrs)
+    end
 
-product.variants.find_or_create_by([
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_white_t_o4fgaz.jpg", color: "#FFFFFF", size: "S", quantity: "20", weight: "", price: 850},
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379945/entrust_blue_t_qtybna.jpg", color: "#4793AF", size: "S", quantity: "20", weight: "", price: 850},
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379945/entrust_red_t_j0iypz.jpg", color: "#E72929", size: "S", quantity: "20", weight: "", price: 850},
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379943/entrust_mustard_t_cw1xor.jpg", color: "#FABC3F", size: "S", quantity: "20", weight: "", price: 850},
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379940/enrtust_gray_t_emxhph.jpg", color: "#31363F", size: "S", quantity: "20", weight: "", price: 850},
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379946/enrust_jungle_t_gjirez.jpg", color: "#A28B55", size: "S", quantity: "20", weight: "", price: 850}
+    hoodies_listing = Listing.find_or_create_by(name: "Hoodies")
 
-])
+    product = hoodies_listing.products.find_or_create_by(
+        name: "Classic Hoodie", 
+        description: 'A classic cotton Hoodie made from a crisp, medium-weight 100% cotton and designed for a tailored, yet comfortable fit. The classic neck rib includes a touch of lycra to retain its shape over time. Branded with the entrust initiative logo on the front.',
+        price: 2500
+    )
+
+    [
+        {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_mustard_hoodie_jrnioq.jpg", color: "#FFB200", size: "XL", quantity: "20", weight: "", price: 2500},
+        {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379941/entrust_black_hoodie_f6pp7i.jpg", color: "#151515", size: "M", quantity: "20", weight: "", price: 2500},
+        {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_mustard_hoodie_jrnioq.jpg", color: "#FFB200", size: "S", quantity: "20", weight: "", price: 2500},
+        {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379941/entrust_black_hoodie_f6pp7i.jpg", color: "#151515", size: "L", quantity: "20", weight: "", price: 2500},
+    ].each do |variant_attrs|
+        product.variants.find_or_create_by(variant_attrs)
+    end
+
+    mugs_listing = Listing.find_or_create_by(name: "Mugs")
+
+    product = mugs_listing.products.find_or_create_by(
+        name: "Beautiful Mugs", 
+        description: 'A beautiful Mug branded with the entrust initiative logo',
+        price: 350
+    )
+    [
+        {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379943/enrtust_mug_uvchrm.jpg", color: "#151515", size: "Normal", quantity: "20", weight: "", price: 350},
+    ].each do |variant_attrs|
+        product.variants.find_or_create_by(variant_attrs)
+    end
 end
 
-hoodies_listing = Listing.find_or_create_by(name: "Hoodies")
-
-unless Product.exists?
-product = hoodies_listing.products.find_or_create_by(
-    name: "Classic Hoodie", 
-    description: 'A classic cotton Hoodie made from a crisp, medium-weight 100% cotton and designed for a tailored, yet comfortable fit. The classic neck rib includes a touch of lycra to retain its shape over time. Branded with the entrust initiative logo on the front.',
-    price: 2500
-)
-
-product.variants.find_or_create_by([
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_mustard_hoodie_jrnioq.jpg", color: "#FFB200", size: "XL", quantity: "20", weight: "", price: 2500},
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379941/entrust_black_hoodie_f6pp7i.jpg", color: "#151515", size: "M", quantity: "20", weight: "", price: 2500},
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_mustard_hoodie_jrnioq.jpg", color: "#FFB200", size: "S", quantity: "20", weight: "", price: 2500},
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379941/entrust_black_hoodie_f6pp7i.jpg", color: "#151515", size: "L", quantity: "20", weight: "", price: 2500},
-
-
-])
-end
-
-mugs_listing = Listing.find_or_create_by(name: "Mugs")
-
-unless Product.exists?
-product = mugs_listing.products.find_or_create_by(
-    name: "Beautiful Mugs", 
-    description: 'A beautiful Mug branded with the entrust initiative logo',
-    price: 350
-)
-
-product.variants.find_or_create_by([
-    {image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379943/enrtust_mug_uvchrm.jpg", color: "#151515", size: "Normal", quantity: "20", weight: "", price: 350},
-
-
-
-])
-end
