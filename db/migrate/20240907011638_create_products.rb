@@ -7,8 +7,8 @@ class CreateProducts < ActiveRecord::Migration[7.1]
       t.string :size
       t.string :color
       t.integer :quantity
+      t.string :image_url
       t.integer :listing_id
-      
 
       t.timestamps
     end

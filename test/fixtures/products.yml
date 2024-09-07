@@ -2,12 +2,20 @@
 
 one:
   name: MyString
-  description: MyString
+  description: MyText
   price: 9.99
+  size: MyString
+  color: MyString
+  quantity: 1
   image_url: MyString
+  listing_id: 1
 
 two:
   name: MyString
-  description: MyString
+  description: MyText
   price: 9.99
+  size: MyString
+  color: MyString
+  quantity: 1
   image_url: MyString
+  listing_id: 1
