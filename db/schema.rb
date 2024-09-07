@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_09_05_184629) do
+ActiveRecord::Schema[7.1].define(version: 2024_09_05_181505) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,6 +33,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_05_184629) do
     t.string "name"
     t.text "description"
     t.decimal "price"
+    t.string "image_url"
+    t.string "size"
+    t.string "color"
+    t.integer "quantity"
     t.integer "listing_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -94,19 +98,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_05_184629) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "variants", force: :cascade do |t|
-    t.bigint "product_id", null: false
-    t.string "image_url"
-    t.string "color"
-    t.string "size"
-    t.string "weight"
-    t.integer "quantity"
-    t.decimal "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_variants_on_product_id"
-  end
-
   create_table "volunteers", force: :cascade do |t|
     t.string "fullname"
     t.string "email"
@@ -119,5 +110,4 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_05_184629) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "variants", "products"
 end
