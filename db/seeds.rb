@@ -85,33 +85,33 @@
 #     end
 # end
 
-# T-shirts (one product for each color)
+
 tshirt_listing = Listing.find_or_create_by(name: "T-shirts")
 
 tshirt_listing.products.create([
-  { name: "Basic T-shirt - White", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_white_t_o4fgaz.jpg", color: "#FFFFFF", size: "S", quantity: 20, price: 850 },
-  { name: "Basic T-shirt - Blue", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379945/entrust_blue_t_qtybna.jpg", color: "#4793AF", size: "S", quantity: 20, price: 850 },
-  { name: "Basic T-shirt - Red", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379945/entrust_red_t_j0iypz.jpg", color: "#E72929", size: "L", quantity: 20, price: 850 },
-  { name: "Basic T-shirt - Mustard", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379943/entrust_mustard_t_cw1xor.jpg", color: "#FABC3F", size: "M", quantity: 20, price: 850 },
-  { name: "Basic T-shirt - Gray", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379940/enrtust_gray_t_emxhph.jpg", color: "#31363F", size: "XL", quantity: 20, price: 850 },
-  { name: "Basic T-shirt - Jungle", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379946/enrust_jungle_t_gjirez.jpg", color: "#A28B55", size: "XXL", quantity: 20, price: 850 }
+  { name: "Basic T-shirt - White", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_white_t_o4fgaz.jpg", description: "A basic cotton t-shirt made from a crisp, medium-weight 100% cotton and designed for a tailored, yet comfortable fit. The classic neck rib includes a touch of lycra to retain its shape over time. Branded with the entrust initiative logo on the front.",color: "#FFFFFF", size: "S", quantity: 20, price: 850 },
+  { name: "Basic T-shirt - Blue", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379945/entrust_blue_t_qtybna.jpg", description: "A basic cotton t-shirt made from a crisp, medium-weight 100% cotton and designed for a tailored, yet comfortable fit. The classic neck rib includes a touch of lycra to retain its shape over time. Branded with the entrust initiative logo on the front.",color: "#4793AF", size: "S", quantity: 20, price: 850 },
+  { name: "Basic T-shirt - Red", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379945/entrust_red_t_j0iypz.jpg", description: "A basic cotton t-shirt made from a crisp, medium-weight 100% cotton and designed for a tailored, yet comfortable fit. The classic neck rib includes a touch of lycra to retain its shape over time. Branded with the entrust initiative logo on the front.",color: "#E72929", size: "L", quantity: 20, price: 850 },
+  { name: "Basic T-shirt - Mustard", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379943/entrust_mustard_t_cw1xor.jpg", description: "A basic cotton t-shirt made from a crisp, medium-weight 100% cotton and designed for a tailored, yet comfortable fit. The classic neck rib includes a touch of lycra to retain its shape over time. Branded with the entrust initiative logo on the front.",color: "#FABC3F", size: "M", quantity: 20, price: 850 },
+  { name: "Basic T-shirt - Gray", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379940/enrtust_gray_t_emxhph.jpg", description: "A basic cotton t-shirt made from a crisp, medium-weight 100% cotton and designed for a tailored, yet comfortable fit. The classic neck rib includes a touch of lycra to retain its shape over time. Branded with the entrust initiative logo on the front.",color: "#31363F", size: "XL", quantity: 20, price: 850 },
+  { name: "Basic T-shirt - Jungle", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379946/enrust_jungle_t_gjirez.jpg", description: "A basic cotton t-shirt made from a crisp, medium-weight 100% cotton and designed for a tailored, yet comfortable fit. The classic neck rib includes a touch of lycra to retain its shape over time. Branded with the entrust initiative logo on the front.",color: "#A28B55", size: "XXL", quantity: 20, price: 850 }
 ])
 
-# Hoodies (one product for each color)
+
 hoodies_listing = Listing.find_or_create_by(name: "Hoodies")
 
 hoodies_listing.products.create([
-  { name: "Classic Hoodie - Mustard", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_mustard_hoodie_jrnioq.jpg", color: "#FFB200", size: "XL", quantity: 20, price: 2500 },
-  { name: "Classic Hoodie - Black", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379941/entrust_black_hoodie_f6pp7i.jpg", color: "#151515", size: "M", quantity: 20, price: 2500 },
-  { name: "Classic Hoodie - Mustard", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_mustard_hoodie_jrnioq.jpg", color: "#FFB200", size: "S", quantity: 20, price: 2500 },
-  { name: "Classic Hoodie - Black", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379941/entrust_black_hoodie_f6pp7i.jpg", color: "#151515", size: "L", quantity: 20, price: 2500 }
+  { name: "Classic Hoodie - Mustard", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_mustard_hoodie_jrnioq.jpg", description: "A classic cotton Hoodie made from a crisp, medium-weight 100% cotton and designed for a tailored, yet comfortable fit. The classic neck rib includes a touch of lycra to retain its shape over time. Branded with the entrust initiative logo on the front.", color: "#FFB200", size: "XL", quantity: 20, price: 2500 },
+  { name: "Classic Hoodie - Black", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379941/entrust_black_hoodie_f6pp7i.jpg", description: "A classic cotton Hoodie made from a crisp, medium-weight 100% cotton and designed for a tailored, yet comfortable fit. The classic neck rib includes a touch of lycra to retain its shape over time. Branded with the entrust initiative logo on the front.", color: "#151515", size: "M", quantity: 20, price: 2500 },
+  { name: "Classic Hoodie - Mustard", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379944/entrust_mustard_hoodie_jrnioq.jpg", description: "A classic cotton Hoodie made from a crisp, medium-weight 100% cotton and designed for a tailored, yet comfortable fit. The classic neck rib includes a touch of lycra to retain its shape over time. Branded with the entrust initiative logo on the front.", color: "#FFB200", size: "S", quantity: 20, price: 2500 },
+  { name: "Classic Hoodie - Black", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379941/entrust_black_hoodie_f6pp7i.jpg", description: "A classic cotton Hoodie made from a crisp, medium-weight 100% cotton and designed for a tailored, yet comfortable fit. The classic neck rib includes a touch of lycra to retain its shape over time. Branded with the entrust initiative logo on the front.", color: "#151515", size: "L", quantity: 20, price: 2500 }
 ])
 
 # Mugs (one product for each color)
 mugs_listing = Listing.find_or_create_by(name: "Mugs")
 
 mugs_listing.products.create([
-  { name: "Beautiful Mug - Black", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379943/enrtust_mug_uvchrm.jpg", color: "#151515", size: "Normal", quantity: 20, price: 350 }
+  { name: "Beautiful Mug - Black", image_url: "https://res.cloudinary.com/dqvb49fnb/image/upload/v1725379943/enrtust_mug_uvchrm.jpg", description: "A beautiful Mug branded with the entrust initiative logo", color: "#151515", size: "Normal", quantity: 20, price: 350 }
 ])
 
 
